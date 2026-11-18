@@ -7,14 +7,9 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
-lib/
-lib64/
-parts/
 sdist/
-var/
 wheels/
 share/python-wheels/
 *.egg-info/
@@ -23,8 +18,8 @@ share/python-wheels/
 MANIFEST
 .venv/
 venv/
-env/
-ENV/
+/env/
+/ENV/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -73,7 +68,7 @@ Icon
 !.env.example
 
 # Data and model weights
-data/
+/data/
 *.pt
 *.pth
 *.onnx
