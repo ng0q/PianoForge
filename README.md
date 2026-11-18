@@ -1,5 +1,7 @@
 # PianoForge
 
-An app that brings together solutions to the problems modern pianists face. Planned tools include note recognition from photos and PDFs, audio transcription into MusicXML with a verifier, and a compressed model intended to run on a phone.
+PianoForge is an app with machine-learning tools for pianists. The project is in early development. Its main direction is transcription of piano audio into MusicXML, with a verifier.
+
+The first milestone is described in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 Status: early development
