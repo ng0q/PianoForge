@@ -1,0 +1,1630 @@
+{
+  "benchmark": "maestro_v3_test10",
+  "manifest": {
+    "selection": {
+      "dataset": "MAESTRO",
+      "version": "3.0.0",
+      "metadata_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0.csv",
+      "split": "test",
+      "composition_key": [
+        "canonical_composer",
+        "canonical_title"
+      ],
+      "candidate_sort": [
+        "canonical_composer",
+        "canonical_title",
+        "midi_filename"
+      ],
+      "one_recording_per_composition": "first row after candidate_sort",
+      "seed": 20261123,
+      "sampler": "numpy.random.Generator.choice, replace=False",
+      "selected_order": "sampled rows sorted again by candidate_sort",
+      "n_test_recordings": 177,
+      "n_candidate_compositions": 154,
+      "sampled_candidate_indices": [
+        6,
+        78,
+        83,
+        8,
+        65,
+        133,
+        35,
+        9,
+        132,
+        112
+      ]
+    },
+    "recordings": [
+      {
+        "order": 0,
+        "canonical_composer": "Claude Debussy",
+        "canonical_title": "Etude \"Pour les accords\"",
+        "year": 2009,
+        "split": "test",
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "duration_s_metadata": 270.703522031,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_sha256": "521412a3d0865ce6588fd75e097483f69e4900e7c9223af2e8cfc117c5492fc1",
+        "midi_sha256": "2a07352f4f35ae22a52d000b4fc15fd42c17adc6e7178004bb1a070294752e8f",
+        "audio_bytes": 47928496,
+        "midi_bytes": 32058,
+        "audio_duration_s": 271.7032426303855,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 1,
+        "canonical_composer": "Claude Debussy",
+        "canonical_title": "Jardins sous la pluie from Estampes",
+        "year": 2011,
+        "split": "test",
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "duration_s_metadata": 207.262079062,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_sha256": "f5629882e64d0ad18cf1050765cc79e4247a8f04e355f957b374131f38e565a9",
+        "midi_sha256": "80e33375ab779d592deefd994fd0a27be2f331ebab3dc7f61cd303518df26592",
+        "audio_bytes": 37001272,
+        "midi_bytes": 29971,
+        "audio_duration_s": 209.75752834467121,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 2,
+        "canonical_composer": "Claude Debussy",
+        "canonical_title": "Pagodas from Estampes No. 1",
+        "year": 2008,
+        "split": "test",
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "duration_s_metadata": 345.819632813,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_sha256": "8c9d33bc839475b26e627e25788604fd673fb7c85628c2c8a0dc3a3f51595e8e",
+        "midi_sha256": "75dcd61d2c385ca35a98bac988296a593396f8766305dac2fa39763126cd45fc",
+        "audio_bytes": 62148616,
+        "midi_bytes": 19245,
+        "audio_duration_s": 352.3161678004535,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 3,
+        "canonical_composer": "Franz Liszt",
+        "canonical_title": "R\u00e9miniscences de Don Juan, S.418",
+        "year": 2014,
+        "split": "test",
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "duration_s_metadata": 977.023595625,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_sha256": "bc99828e6baef71073eaccbde4c048356c9410e22538c13c156420d024c53b3d",
+        "midi_sha256": "2ddebdcefef98c226a4e664e874d1e41eacd378efcf545b946d1cfbe8cfbc263",
+        "audio_bytes": 172555588,
+        "midi_bytes": 172792,
+        "audio_duration_s": 978.2060317460317,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 4,
+        "canonical_composer": "Franz Schubert / Franz Liszt",
+        "canonical_title": "Song Transcriptions: Aufenthalt, Gretchen am Spinnrade, Standchen von Shakespeare, Der Erlkonig",
+        "year": 2004,
+        "split": "test",
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "duration_s_metadata": 189.921448277,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_sha256": "b35dbcf0d6a7b7fa8b15c032b11f082173d0b57ba969e0c347692388c90ad8cf",
+        "midi_sha256": "fb13e8064b210132ca56a424130cb57e3ed38c74a955624d005fe542c9474343",
+        "audio_bytes": 33502192,
+        "midi_bytes": 26143,
+        "audio_duration_s": 189.9214739229025,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 5,
+        "canonical_composer": "Fr\u00e9d\u00e9ric Chopin",
+        "canonical_title": "Polonaise-Fantasie Op. 61",
+        "year": 2008,
+        "split": "test",
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "duration_s_metadata": 664.581333281,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_sha256": "d3c07ff0af33bf8b072d78cc0dd1f4462f3cae534dfc311233aed5d7ae7983ca",
+        "midi_sha256": "4b223df38f6d7f9494d7427be33a59ce0caf6a848e568d5715c9accb10c66270",
+        "audio_bytes": 118684428,
+        "midi_bytes": 79405,
+        "audio_duration_s": 672.8139682539683,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 6,
+        "canonical_composer": "Fr\u00e9d\u00e9ric Chopin",
+        "canonical_title": "Valse brillante No. 1 in A-flat Major, Op. 34",
+        "year": 2015,
+        "split": "test",
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "duration_s_metadata": 304.59375,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_sha256": "7b632c2c12f70cae7ebe8b7d964c74543b513cc5e4d7b195b69d6b88f9271390",
+        "midi_sha256": "e630f5743c8b209399df1f1b15e3cdba253e7e0028d0c3db898c985666141ead",
+        "audio_bytes": 53964848,
+        "midi_bytes": 34630,
+        "audio_duration_s": 305.922925170068,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 7,
+        "canonical_composer": "Ludwig van Beethoven",
+        "canonical_title": "Sonata No. 16 in G Major, Op. 31 No. 1, First movement",
+        "year": 2008,
+        "split": "test",
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "duration_s_metadata": 277.578515156,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_sha256": "46dbc0c7ecffd83aa6cad3a58fad5aa211c1d0cf58d635d6659267728e5da3e9",
+        "midi_sha256": "f511cc15af86b7a004d8d6350c798b466db8486a986a94108f3bd6953a2f1608",
+        "audio_bytes": 49141248,
+        "midi_bytes": 24833,
+        "audio_duration_s": 278.578253968254,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 8,
+        "canonical_composer": "Robert Schumann",
+        "canonical_title": "Toccata Op. 7",
+        "year": 2006,
+        "split": "test",
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "duration_s_metadata": 311.429977031,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_sha256": "abea021bdead6cbf14bbafbae321ae317330254116dfc8c94e53dca5028eed31",
+        "midi_sha256": "14f79ef916a0e4694c4b6c094c256a9b3334fe6f06dfeec909b72740124be187",
+        "audio_bytes": 55169184,
+        "midi_bytes": 66930,
+        "audio_duration_s": 312.7502267573696,
+        "audio_duration_source": "soundfile.info"
+      },
+      {
+        "order": 9,
+        "canonical_composer": "Robert Schumann",
+        "canonical_title": "Toccata in C Major, Op. 7",
+        "year": 2014,
+        "split": "test",
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "duration_s_metadata": 404.076786094,
+        "midi_source_url": "https://storage.googleapis.com/magentadata/datasets/maestro/v3.0.0/maestro-v3.0.0-midi.zip",
+        "audio_source_url": "https://huggingface.co/datasets/ddPn08/maestro-v3.0.0/resolve/main/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "audio_source_note": "Official per-file audio URLs under storage.googleapis.com/magentadata return 404. Audio is published inside maestro-v3.0.0.zip (101 GB). This copy uses the same relative path from the ddPn08/maestro-v3.0.0 mirror. MIDI comes from the official maestro-v3.0.0-midi.zip.",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_sha256": "3b0e3343ce98337a2c64bbd2027573b80433be70f0045aab7a7a0e79ccbe299a",
+        "midi_sha256": "5a84064fd5e828173d66eee27ac44ed57ce353ea86c97a63c58c03ed4d1bc849",
+        "audio_bytes": 71506664,
+        "midi_bytes": 102510,
+        "audio_duration_s": 405.36632653061224,
+        "audio_duration_source": "soundfile.info"
+      }
+    ],
+    "metadata": {
+      "filename": "maestro-v3.0.0.csv",
+      "path": "/Users/ilya/Documents/Samsung_project/data/maestro-v3.0.0/maestro-v3.0.0.csv",
+      "bytes": 298977,
+      "sha256": "cb88a64a12971a995dd41852aa3a33879501cf70d01b9a6feb637f4ad8d8ddff"
+    }
+  },
+  "configuration": {
+    "evaluation": {
+      "event": "(midi_pitch, onset_s, offset_s)",
+      "reference": "pretty_midi note-on/note-off; CC64 sustain is not applied",
+      "pedal_extension": false,
+      "pitch_hz": "440 * 2 ** ((midi_pitch - 69) / 12)",
+      "function": "mir_eval.transcription.precision_recall_f1_overlap",
+      "pitch_tolerance_cents": 50.0,
+      "onset": {
+        "onset_tolerance_s": 0.05,
+        "offset_ratio": null,
+        "pitch_tolerance_cents": 50.0
+      },
+      "onset_offset": {
+        "onset_tolerance_s": 0.05,
+        "offset_ratio": 0.2,
+        "offset_min_tolerance_s": 0.05,
+        "offset_tolerance": "max(50 ms, 20% of the reference note duration)",
+        "pitch_tolerance_cents": 50.0
+      },
+      "drop_nonpositive_duration": true
+    },
+    "evaluation_self_check": {
+      "passed": true,
+      "case": "synthetic_three_reference_notes",
+      "onset": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715
+      },
+      "onset_offset": {
+        "precision": 0.25,
+        "recall": 0.3333333333333333,
+        "f1": 0.28571428571428575
+      },
+      "evaluation": {
+        "event": "(midi_pitch, onset_s, offset_s)",
+        "reference": "pretty_midi note-on/note-off; CC64 sustain is not applied",
+        "pedal_extension": false,
+        "pitch_hz": "440 * 2 ** ((midi_pitch - 69) / 12)",
+        "function": "mir_eval.transcription.precision_recall_f1_overlap",
+        "pitch_tolerance_cents": 50.0,
+        "onset": {
+          "onset_tolerance_s": 0.05,
+          "offset_ratio": null,
+          "pitch_tolerance_cents": 50.0
+        },
+        "onset_offset": {
+          "onset_tolerance_s": 0.05,
+          "offset_ratio": 0.2,
+          "offset_min_tolerance_s": 0.05,
+          "offset_tolerance": "max(50 ms, 20% of the reference note duration)",
+          "pitch_tolerance_cents": 50.0
+        },
+        "drop_nonpositive_duration": true
+      }
+    },
+    "timing": {
+      "warmup": "one untimed full transcription of the first selected recording",
+      "latency": "perf_counter from the model's audio read through the note list",
+      "includes": [
+        "preprocessing",
+        "inference",
+        "decoding"
+      ],
+      "excludes": [
+        "model load",
+        "metric computation"
+      ],
+      "accelerator_sync": "before the timer starts and before it stops",
+      "rtf": "latency_s / audio_duration_s",
+      "overall_rtf": "sum(latency_s) / sum(audio_duration_s) over successful recordings",
+      "median_latency": "median of per-recording latency_s"
+    },
+    "inference": {
+      "hft_transformer": {
+        "mode": "combination",
+        "scored_output": "2nd",
+        "n_stride": 0,
+        "ablation": false,
+        "thred_onset": 0.5,
+        "thred_offset": 0.5,
+        "thred_mpe": 0.5,
+        "mode_velocity": "ignore_zero",
+        "mode_offset": "shorter",
+        "config": "corpus/config.json plus min_value=log(log_offset) and max_value=0 from corpus/make_dataset.py",
+        "preprocessing": "AMT.wav2feature",
+        "decoding": "AMT.transcript + AMT.mpe2note"
+      },
+      "transkun_v2": {
+        "segmentHopSizeInSecond": 8,
+        "segmentSizeInSecond": 16,
+        "discardSecondHalf": false,
+        "mergeIncompleteEvent": true,
+        "fs": 44100,
+        "audio_normalization": "int16 / 2**15",
+        "resample": "soxr to model.fs when the file rate differs",
+        "wav_reader": "pydub.AudioSegment.from_file; upstream readAudio calls from_mp3",
+        "note_filter": "pitch > 0, matching Data.writeMidi",
+        "decoding": "ModelTransformer.transcribe",
+        "config": "model.conf inside the Google Drive archive. scoringExpansionFactor=2 and contextDropoutProb=0.1. The repository file pretrained/2.0.conf belongs to Transkun V2 No Pedal Ext and is not used."
+      },
+      "sft_crnn": {
+        "config": "config/main_config.yaml via hydra, experiment_optTransportLoss",
+        "n_frames": 1200,
+        "dropout_rate": 0.0,
+        "training_mode": "test",
+        "batch_inference": 64,
+        "onset_offset_threshold": 0.5,
+        "sample_rate": 48000,
+        "hop_length": 1200,
+        "features": "cqt",
+        "amplitude_to_db": true,
+        "duration_clip_s": [
+          0.05,
+          10.0
+        ],
+        "precision": "float32; upstream inference.py autocasts float16 on CUDA only",
+        "preprocessing": "librosa.load + nnAudio CQT + AmplitudeToDB, as inference.py",
+        "decoding": "data.notes_parser.pianoroll_to_notes_list"
+      },
+      "hrt": {
+        "model_type": "Note_pedal",
+        "segment_samples": 160000,
+        "forward_batch_size": 1,
+        "onset_threshold": 0.3,
+        "offset_threshold": 0.3,
+        "frame_threshold": 0.1,
+        "pedal_offset_threshold": 0.2,
+        "sample_rate": 16000,
+        "preprocessing": "piano_transcription_inference.utilities.load_audio",
+        "decoding": "RegressionPostProcessor.output_dict_to_midi_events"
+      },
+      "onsets_frames": {
+        "checkpoint": "maestro_checkpoint.zip",
+        "entry": "onsets_frames_transcription_transcribe"
+      }
+    },
+    "recording_limit": null,
+    "device_request": "auto",
+    "sft_crnn_process_note": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 3 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error."
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-27.2.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "numpy": "2.5.5",
+    "mir_eval": "0.8.2",
+    "pretty_midi": "0.2.11.post0",
+    "torch": "2.15.0",
+    "torchaudio": "2.11.1",
+    "librosa": "1.0.1",
+    "soundfile": "0.14.0"
+  },
+  "checkpoints": {
+    "hft_transformer": {
+      "name": "hFT-Transformer",
+      "repository": "https://github.com/sony/hFT-Transformer",
+      "revision": "226992b071b379b29232cd3df99c9b263cc8c312",
+      "expected_revision": "226992b071b379b29232cd3df99c9b263cc8c312",
+      "weight_url": "https://github.com/sony/hFT-Transformer/releases/download/ismir2023/checkpoint.zip",
+      "variant": "MAESTRO-V3 model_016_003",
+      "inference": {
+        "mode": "combination",
+        "scored_output": "2nd",
+        "n_stride": 0,
+        "ablation": false,
+        "thred_onset": 0.5,
+        "thred_offset": 0.5,
+        "thred_mpe": 0.5,
+        "mode_velocity": "ignore_zero",
+        "mode_offset": "shorter",
+        "config": "corpus/config.json plus min_value=log(log_offset) and max_value=0 from corpus/make_dataset.py",
+        "preprocessing": "AMT.wav2feature",
+        "decoding": "AMT.transcript + AMT.mpe2note"
+      },
+      "weights": {
+        "filename": "model_016_003.pkl",
+        "path": "/Users/ilya/Documents/Samsung_project/data/amt-benchmark/weights/hft/model_016_003.pkl",
+        "bytes": 22136000,
+        "sha256": "f3a90cf0b82895f9923f3e766bff7e0a4759bc477370f015496ded2ad63e127f"
+      },
+      "available": true,
+      "unavailable_reason": null
+    },
+    "transkun_v2": {
+      "name": "Transkun V2",
+      "repository": "https://github.com/Yujia-Yan/Transkun",
+      "revision": "c5cb8370e17b4a1650b5971ba87ee4b0d208e5b6",
+      "expected_revision": "c5cb8370e17b4a1650b5971ba87ee4b0d208e5b6",
+      "weight_url": "https://drive.google.com/file/d/1pxGpO8eCdFxMRrXi_YUh7_uC0Ae26coB/view",
+      "variant": "Transkun V2",
+      "inference": {
+        "segmentHopSizeInSecond": 8,
+        "segmentSizeInSecond": 16,
+        "discardSecondHalf": false,
+        "mergeIncompleteEvent": true,
+        "fs": 44100,
+        "audio_normalization": "int16 / 2**15",
+        "resample": "soxr to model.fs when the file rate differs",
+        "wav_reader": "pydub.AudioSegment.from_file; upstream readAudio calls from_mp3",
+        "note_filter": "pitch > 0, matching Data.writeMidi",
+        "decoding": "ModelTransformer.transcribe",
+        "config": "model.conf inside the Google Drive archive. scoringExpansionFactor=2 and contextDropoutProb=0.1. The repository file pretrained/2.0.conf belongs to Transkun V2 No Pedal Ext and is not used."
+      },
+      "weights": {
+        "filename": "transkun_v2.pt",
+        "path": "/Users/ilya/Documents/Samsung_project/data/amt-benchmark/weights/transkun_v2.pt",
+        "bytes": 47830063,
+        "sha256": "a7341e89ca3ceafce39c15ae1c4ea520b9d6d78498736d8d6b0602433ddfa941"
+      },
+      "available": true,
+      "unavailable_reason": null
+    },
+    "sft_crnn": {
+      "name": "SFT-CRNN",
+      "repository": "https://github.com/WX-Wei/AMT-optimal-transport",
+      "revision": "21e69640b7c6c8a2860dab9a8b612e3bab18b87e",
+      "expected_revision": "21e69640b7c6c8a2860dab9a8b612e3bab18b87e",
+      "weight_url": "https://github.com/WX-Wei/AMT-optimal-transport/releases/download/v0.0.1/SFT-CRNN_Piano-MAESTRO_OTLoss_steps.340609.ckpt",
+      "variant": "SFT-CRNN Piano MAESTRO OT loss, step 340609",
+      "inference": {
+        "config": "config/main_config.yaml via hydra, experiment_optTransportLoss",
+        "n_frames": 1200,
+        "dropout_rate": 0.0,
+        "training_mode": "test",
+        "batch_inference": 64,
+        "onset_offset_threshold": 0.5,
+        "sample_rate": 48000,
+        "hop_length": 1200,
+        "features": "cqt",
+        "amplitude_to_db": true,
+        "duration_clip_s": [
+          0.05,
+          10.0
+        ],
+        "precision": "float32; upstream inference.py autocasts float16 on CUDA only",
+        "preprocessing": "librosa.load + nnAudio CQT + AmplitudeToDB, as inference.py",
+        "decoding": "data.notes_parser.pianoroll_to_notes_list"
+      },
+      "weights": {
+        "filename": "SFT-CRNN_Piano-MAESTRO_OTLoss_steps.340609.ckpt",
+        "path": "/Users/ilya/Documents/Samsung_project/data/amt-benchmark/weights/SFT-CRNN_Piano-MAESTRO_OTLoss_steps.340609.ckpt",
+        "bytes": 61983435,
+        "sha256": "0c065bc952591cda09197a2b811e0c117669ddba73982aeeed0c531586a755dd"
+      },
+      "available": true,
+      "unavailable_reason": null
+    },
+    "hrt": {
+      "name": "HRT",
+      "repository": "https://github.com/bytedance/piano_transcription",
+      "revision": "566057930a8423aa31b91296e7002c513269446d",
+      "expected_revision": "1ade7dcd4348add669a67c6e6282456c8c6633bd",
+      "weight_url": "https://zenodo.org/records/4034264/files/CRNN_note_F1%3D0.9677_pedal_F1%3D0.9186.pth?download=1",
+      "variant": "Note_pedal CRNN_note_F1=0.9677_pedal_F1=0.9186",
+      "inference": {
+        "model_type": "Note_pedal",
+        "segment_samples": 160000,
+        "forward_batch_size": 1,
+        "onset_threshold": 0.3,
+        "offset_threshold": 0.3,
+        "frame_threshold": 0.1,
+        "pedal_offset_threshold": 0.2,
+        "sample_rate": 16000,
+        "preprocessing": "piano_transcription_inference.utilities.load_audio",
+        "decoding": "RegressionPostProcessor.output_dict_to_midi_events"
+      },
+      "implementation_repository": "https://github.com/qiuqiangkong/piano_transcription_inference",
+      "implementation_revision": "566057930a8423aa31b91296e7002c513269446d",
+      "paper_repository": "https://github.com/bytedance/piano_transcription",
+      "paper_revision": "1ade7dcd4348add669a67c6e6282456c8c6633bd",
+      "weights": {
+        "filename": "CRNN_note_F1=0.9677_pedal_F1=0.9186.pth",
+        "path": "/Users/ilya/Documents/Samsung_project/data/amt-benchmark/weights/CRNN_note_F1=0.9677_pedal_F1=0.9186.pth",
+        "bytes": 171966578,
+        "sha256": "c3fa9730725bf4a762f1c14bc80cd5986eacda01b026f5a4a2525cd607876141"
+      },
+      "available": true,
+      "unavailable_reason": null,
+      "sha256_matches_published_author_file": true,
+      "published_sha256": "c3fa9730725bf4a762f1c14bc80cd5986eacda01b026f5a4a2525cd607876141",
+      "mirror_url": "https://huggingface.co/Genius-Society/piano_trans/resolve/main/CRNN_note_F1%3D0.9677_pedal_F1%3D0.9186.pth",
+      "weight_acquisition": "Zenodo returned HTTP 403 from this network. The local file is the Hugging Face copy of the same author checkpoint, checked against the published SHA-256."
+    },
+    "onsets_frames": {
+      "name": "OnF",
+      "repository": "https://github.com/magenta/magenta",
+      "revision": null,
+      "expected_revision": null,
+      "weight_url": "https://storage.googleapis.com/magentadata/models/onsets_frames_transcription/maestro_checkpoint.zip",
+      "variant": "Magenta Onsets and Frames, MAESTRO checkpoint",
+      "inference": {
+        "checkpoint": "maestro_checkpoint.zip",
+        "entry": "onsets_frames_transcription_transcribe"
+      },
+      "weights": null,
+      "available": false,
+      "unavailable_reason": "weight file is missing: maestro_checkpoint.zip"
+    }
+  },
+  "recordings": {
+    "hft_transformer": [
+      {
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_duration_s": 271.7032426303855,
+        "latency_s": 35.620423542000026,
+        "rtf": 0.13110047269644354,
+        "onset": {
+          "precision": 0.9923479661699557,
+          "recall": 0.8543689320388349,
+          "f1": 0.9182038382709148
+        },
+        "onset_offset": {
+          "precision": 0.23640757148610553,
+          "recall": 0.2035367545076283,
+          "f1": 0.21874417738028695
+        },
+        "n_ref_notes": 2884,
+        "n_est_notes": 2483,
+        "error": null
+      },
+      {
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_duration_s": 209.75752834467121,
+        "latency_s": 27.201505250000082,
+        "rtf": 0.12968071022129357,
+        "onset": {
+          "precision": 0.9977186311787072,
+          "recall": 0.9611721611721612,
+          "f1": 0.9791044776119403
+        },
+        "onset_offset": {
+          "precision": 0.18098859315589352,
+          "recall": 0.17435897435897435,
+          "f1": 0.17761194029850744
+        },
+        "n_ref_notes": 2730,
+        "n_est_notes": 2630,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_duration_s": 352.3161678004535,
+        "latency_s": 46.85408266700051,
+        "rtf": 0.1329887383809702,
+        "onset": {
+          "precision": 0.9947328818660647,
+          "recall": 0.9531362653208363,
+          "f1": 0.9734904270986744
+        },
+        "onset_offset": {
+          "precision": 0.013544018058690745,
+          "recall": 0.012977649603460706,
+          "f1": 0.013254786450662739
+        },
+        "n_ref_notes": 2774,
+        "n_est_notes": 2658,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_duration_s": 978.2060317460317,
+        "latency_s": 128.5192958329999,
+        "rtf": 0.13138264502785943,
+        "onset": {
+          "precision": 0.9913324518877626,
+          "recall": 0.8671292726805448,
+          "f1": 0.9250805401329769
+        },
+        "onset_offset": {
+          "precision": 0.15337152930806522,
+          "recall": 0.1341557440246723,
+          "f1": 0.1431215299198026
+        },
+        "n_ref_notes": 15564,
+        "n_est_notes": 13614,
+        "error": null
+      },
+      {
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_duration_s": 189.9214739229025,
+        "latency_s": 24.752884957999413,
+        "rtf": 0.13033220755251562,
+        "onset": {
+          "precision": 0.9962932454695222,
+          "recall": 0.9111111111111111,
+          "f1": 0.9518001180405272
+        },
+        "onset_offset": {
+          "precision": 0.19769357495881384,
+          "recall": 0.1807909604519774,
+          "f1": 0.1888648435963014
+        },
+        "n_ref_notes": 2655,
+        "n_est_notes": 2428,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_duration_s": 672.8139682539683,
+        "latency_s": 88.15856387500025,
+        "rtf": 0.13102962785356873,
+        "onset": {
+          "precision": 0.9919734775780841,
+          "recall": 0.9468687541638907,
+          "f1": 0.9688964635705155
+        },
+        "onset_offset": {
+          "precision": 0.1617518757633921,
+          "recall": 0.1543970686209194,
+          "f1": 0.15798892202812098
+        },
+        "n_ref_notes": 6004,
+        "n_est_notes": 5731,
+        "error": null
+      },
+      {
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_duration_s": 305.922925170068,
+        "latency_s": 39.183531499999845,
+        "rtf": 0.12808301789810952,
+        "onset": {
+          "precision": 0.9974241556954779,
+          "recall": 0.9677867259094696,
+          "f1": 0.9823819591261451
+        },
+        "onset_offset": {
+          "precision": 0.28248425872925015,
+          "recall": 0.27409053040821996,
+          "f1": 0.27822410147991544
+        },
+        "n_ref_notes": 3601,
+        "n_est_notes": 3494,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_duration_s": 278.578253968254,
+        "latency_s": 36.43715095800053,
+        "rtf": 0.13079682437148452,
+        "onset": {
+          "precision": 0.9908198797087686,
+          "recall": 0.9467634603750756,
+          "f1": 0.9682907965970611
+        },
+        "onset_offset": {
+          "precision": 0.8369737258626148,
+          "recall": 0.7997580157289776,
+          "f1": 0.8179427687548337
+        },
+        "n_ref_notes": 3306,
+        "n_est_notes": 3159,
+        "error": null
+      },
+      {
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_duration_s": 312.7502267573696,
+        "latency_s": 40.50481166700047,
+        "rtf": 0.12951169400246013,
+        "onset": {
+          "precision": 0.9937802349689012,
+          "recall": 0.9386422976501305,
+          "f1": 0.9654246391406512
+        },
+        "onset_offset": {
+          "precision": 0.5340359364201797,
+          "recall": 0.5044060052219321,
+          "f1": 0.5187982544478013
+        },
+        "n_ref_notes": 6128,
+        "n_est_notes": 5788,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_duration_s": 405.36632653061224,
+        "latency_s": 53.657984667000164,
+        "rtf": 0.13236912184156976,
+        "onset": {
+          "precision": 0.9952947327146778,
+          "recall": 0.9212436486813452,
+          "f1": 0.9568386002387385
+        },
+        "onset_offset": {
+          "precision": 0.3162985230688799,
+          "recall": 0.2927655456085168,
+          "f1": 0.30407740152038704
+        },
+        "n_ref_notes": 8266,
+        "n_est_notes": 7651,
+        "error": null
+      }
+    ],
+    "transkun_v2": [
+      {
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_duration_s": 271.7032426303855,
+        "latency_s": 23.989753833000577,
+        "rtf": 0.08829395483378645,
+        "onset": {
+          "precision": 0.9904942965779467,
+          "recall": 0.9032593619972261,
+          "f1": 0.9448676097207109
+        },
+        "onset_offset": {
+          "precision": 0.22775665399239545,
+          "recall": 0.20769764216366157,
+          "f1": 0.2172651432716721
+        },
+        "n_ref_notes": 2884,
+        "n_est_notes": 2630,
+        "error": null
+      },
+      {
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_duration_s": 209.75752834467121,
+        "latency_s": 19.04935616700004,
+        "rtf": 0.09081607853282078,
+        "onset": {
+          "precision": 0.9943988050784167,
+          "recall": 0.9754578754578754,
+          "f1": 0.9848372781065088
+        },
+        "onset_offset": {
+          "precision": 0.17662434652725914,
+          "recall": 0.17326007326007326,
+          "f1": 0.17492603550295854
+        },
+        "n_ref_notes": 2730,
+        "n_est_notes": 2678,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_duration_s": 352.3161678004535,
+        "latency_s": 29.889659124999525,
+        "rtf": 0.08483760285996461,
+        "onset": {
+          "precision": 0.9988805970149254,
+          "recall": 0.9650324441240087,
+          "f1": 0.9816648331499817
+        },
+        "onset_offset": {
+          "precision": 0.008955223880597015,
+          "recall": 0.008651766402307137,
+          "f1": 0.0088008800880088
+        },
+        "n_ref_notes": 2774,
+        "n_est_notes": 2680,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_duration_s": 978.2060317460317,
+        "latency_s": 87.99636054200073,
+        "rtf": 0.08995687788280468,
+        "onset": {
+          "precision": 0.9912669714129767,
+          "recall": 0.9335003855050116,
+          "f1": 0.9615168260481123
+        },
+        "onset_offset": {
+          "precision": 0.1498260216961179,
+          "recall": 0.14109483423284502,
+          "f1": 0.1453294067039476
+        },
+        "n_ref_notes": 15564,
+        "n_est_notes": 14657,
+        "error": null
+      },
+      {
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_duration_s": 189.9214739229025,
+        "latency_s": 23.267448791999414,
+        "rtf": 0.12251088995573348,
+        "onset": {
+          "precision": 0.9924812030075187,
+          "recall": 0.9446327683615819,
+          "f1": 0.9679660362794287
+        },
+        "onset_offset": {
+          "precision": 0.19390581717451524,
+          "recall": 0.18455743879472694,
+          "f1": 0.18911617136240835
+        },
+        "n_ref_notes": 2655,
+        "n_est_notes": 2527,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_duration_s": 672.8139682539683,
+        "latency_s": 68.39269337499991,
+        "rtf": 0.10165171444416803,
+        "onset": {
+          "precision": 0.9929770469338814,
+          "recall": 0.965522984676882,
+          "f1": 0.9790575916230365
+        },
+        "onset_offset": {
+          "precision": 0.16135662898252826,
+          "recall": 0.15689540306462357,
+          "f1": 0.15909474750886676
+        },
+        "n_ref_notes": 6004,
+        "n_est_notes": 5838,
+        "error": null
+      },
+      {
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_duration_s": 305.922925170068,
+        "latency_s": 28.601737916000275,
+        "rtf": 0.09349328070166711,
+        "onset": {
+          "precision": 0.9968882602545969,
+          "recall": 0.9786170508192169,
+          "f1": 0.9876681614349775
+        },
+        "onset_offset": {
+          "precision": 0.28995756718529,
+          "recall": 0.28464315467925577,
+          "f1": 0.28727578475336324
+        },
+        "n_ref_notes": 3601,
+        "n_est_notes": 3535,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_duration_s": 278.578253968254,
+        "latency_s": 30.362574791999577,
+        "rtf": 0.10899118778833186,
+        "onset": {
+          "precision": 0.9959413050265377,
+          "recall": 0.9649122807017544,
+          "f1": 0.9801812874481487
+        },
+        "onset_offset": {
+          "precision": 0.8548236028723072,
+          "recall": 0.8281911675741077,
+          "f1": 0.8412966661545552
+        },
+        "n_ref_notes": 3306,
+        "n_est_notes": 3203,
+        "error": null
+      },
+      {
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_duration_s": 312.7502267573696,
+        "latency_s": 38.71119141700001,
+        "rtf": 0.12377670135802012,
+        "onset": {
+          "precision": 0.9936924650528469,
+          "recall": 0.9512075718015666,
+          "f1": 0.9719859929964982
+        },
+        "onset_offset": {
+          "precision": 0.5792703716331401,
+          "recall": 0.5545039164490861,
+          "f1": 0.5666166416541603
+        },
+        "n_ref_notes": 6128,
+        "n_est_notes": 5866,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_duration_s": 405.36632653061224,
+        "latency_s": 38.0962738749995,
+        "rtf": 0.09397986803948936,
+        "onset": {
+          "precision": 0.9954279908559817,
+          "recall": 0.9482216307766755,
+          "f1": 0.9712515489467163
+        },
+        "onset_offset": {
+          "precision": 0.3333756667513335,
+          "recall": 0.317565932736511,
+          "f1": 0.325278810408922
+        },
+        "n_ref_notes": 8266,
+        "n_est_notes": 7874,
+        "error": null
+      }
+    ],
+    "sft_crnn": [
+      {
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_duration_s": 271.7032426303855,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "MPS forward stalled after the model loaded (CPU time stopped advancing). The process was stopped."
+      },
+      {
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_duration_s": 209.75752834467121,
+        "latency_s": 134.9729582079999,
+        "rtf": 0.6434713417590135,
+        "onset": {
+          "precision": 0.9958939902948861,
+          "recall": 0.9772893772893773,
+          "f1": 0.9865039748567203
+        },
+        "onset_offset": {
+          "precision": 0.18365061590145576,
+          "recall": 0.18021978021978022,
+          "f1": 0.18191902384914035
+        },
+        "n_ref_notes": 2730,
+        "n_est_notes": 2679,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_duration_s": 352.3161678004535,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "MPS forward stalled after the model loaded (CPU time stopped advancing). The process was stopped."
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_duration_s": 978.2060317460317,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "MPS forward stalled after the model loaded (CPU time stopped advancing). The process was stopped."
+      },
+      {
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_duration_s": 189.9214739229025,
+        "latency_s": 125.30088333399908,
+        "rtf": 0.6597510052226334,
+        "onset": {
+          "precision": 0.9885420782299487,
+          "recall": 0.9423728813559322,
+          "f1": 0.9649055148476667
+        },
+        "onset_offset": {
+          "precision": 0.19834057684709602,
+          "recall": 0.18907721280602638,
+          "f1": 0.19359814886232163
+        },
+        "n_ref_notes": 2655,
+        "n_est_notes": 2531,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_duration_s": 672.8139682539683,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "MPS forward stalled after the model loaded (CPU time stopped advancing). The process was stopped."
+      },
+      {
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_duration_s": 305.922925170068,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: MPS backend out of memory (MPS allocated: 8.94 GiB, other allocations: 9.24 GiB, max allowed: 20.13 GiB). Tried to allocate 2.25 GiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure)."
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_duration_s": 278.578253968254,
+        "latency_s": 204.57530887499888,
+        "rtf": 0.7343549109124351,
+        "onset": {
+          "precision": 0.9874039938556067,
+          "recall": 0.9721718088324259,
+          "f1": 0.979728699893309
+        },
+        "onset_offset": {
+          "precision": 0.832258064516129,
+          "recall": 0.8194192377495463,
+          "f1": 0.8257887517146776
+        },
+        "n_ref_notes": 3306,
+        "n_est_notes": 3255,
+        "error": null
+      },
+      {
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_duration_s": 312.7502267573696,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: MPS backend out of memory (MPS allocated: 8.94 GiB, other allocations: 9.24 GiB, max allowed: 20.13 GiB). Tried to allocate 2.25 GiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure)."
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_duration_s": 405.36632653061224,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "MPS forward stalled after the model loaded (CPU time stopped advancing). The process was stopped."
+      }
+    ],
+    "hrt": [
+      {
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_duration_s": 271.7032426303855,
+        "latency_s": 119.01034462500138,
+        "rtf": 0.4380159157205879,
+        "onset": {
+          "precision": 0.9636785162287481,
+          "recall": 0.8647711511789181,
+          "f1": 0.9115497076023392
+        },
+        "onset_offset": {
+          "precision": 0.21213292117465224,
+          "recall": 0.19036061026352288,
+          "f1": 0.2006578947368421
+        },
+        "n_ref_notes": 2884,
+        "n_est_notes": 2588,
+        "error": null
+      },
+      {
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_duration_s": 209.75752834467121,
+        "latency_s": 88.7512955000002,
+        "rtf": 0.4231137552029363,
+        "onset": {
+          "precision": 0.9784626810248793,
+          "recall": 0.9652014652014652,
+          "f1": 0.9717868338557994
+        },
+        "onset_offset": {
+          "precision": 0.14853323431117713,
+          "recall": 0.14652014652014653,
+          "f1": 0.14751982297621244
+        },
+        "n_ref_notes": 2730,
+        "n_est_notes": 2693,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_duration_s": 352.3161678004535,
+        "latency_s": 153.51690674999918,
+        "rtf": 0.43573619600945707,
+        "onset": {
+          "precision": 0.9838467317806161,
+          "recall": 0.9441240086517664,
+          "f1": 0.9635761589403974
+        },
+        "onset_offset": {
+          "precision": 0.0101427498121713,
+          "recall": 0.00973323720259553,
+          "f1": 0.009933774834437087
+        },
+        "n_ref_notes": 2774,
+        "n_est_notes": 2662,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_duration_s": 978.2060317460317,
+        "latency_s": 424.37027741699967,
+        "rtf": 0.4338250467128355,
+        "onset": {
+          "precision": 0.9496916360612571,
+          "recall": 0.8805576972500643,
+          "f1": 0.9138189698283047
+        },
+        "onset_offset": {
+          "precision": 0.10643753031667937,
+          "recall": 0.09868928296067848,
+          "f1": 0.10241706951158526
+        },
+        "n_ref_notes": 15564,
+        "n_est_notes": 14431,
+        "error": null
+      },
+      {
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_duration_s": 189.9214739229025,
+        "latency_s": 81.99310437500026,
+        "rtf": 0.43172108283176486,
+        "onset": {
+          "precision": 0.9643974960876369,
+          "recall": 0.928436911487759,
+          "f1": 0.9460756092880446
+        },
+        "onset_offset": {
+          "precision": 0.14045383411580595,
+          "recall": 0.1352165725047081,
+          "f1": 0.13778545384763002
+        },
+        "n_ref_notes": 2655,
+        "n_est_notes": 2556,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_duration_s": 672.8139682539683,
+        "latency_s": 297.552077458,
+        "rtf": 0.44225014862605005,
+        "onset": {
+          "precision": 0.9692675431108075,
+          "recall": 0.9455363091272485,
+          "f1": 0.9572548688980692
+        },
+        "onset_offset": {
+          "precision": 0.12463718627283592,
+          "recall": 0.12158560959360426,
+          "f1": 0.12309248798583593
+        },
+        "n_ref_notes": 6004,
+        "n_est_notes": 5857,
+        "error": null
+      },
+      {
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_duration_s": 305.922925170068,
+        "latency_s": 134.2114013749997,
+        "rtf": 0.4387098524910782,
+        "onset": {
+          "precision": 0.9828120597351366,
+          "recall": 0.968619827825604,
+          "f1": 0.9756643356643356
+        },
+        "onset_offset": {
+          "precision": 0.2454212454212454,
+          "recall": 0.24187725631768953,
+          "f1": 0.24363636363636362
+        },
+        "n_ref_notes": 3601,
+        "n_est_notes": 3549,
+        "error": null
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_duration_s": 278.578253968254,
+        "latency_s": 120.66256912500103,
+        "rtf": 0.4331370715632075,
+        "onset": {
+          "precision": 0.9752475247524752,
+          "recall": 0.9534180278281912,
+          "f1": 0.964209238299174
+        },
+        "onset_offset": {
+          "precision": 0.7747524752475248,
+          "recall": 0.7574107683000605,
+          "f1": 0.7659834811869072
+        },
+        "n_ref_notes": 3306,
+        "n_est_notes": 3232,
+        "error": null
+      },
+      {
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_duration_s": 312.7502267573696,
+        "latency_s": 137.7662478330003,
+        "rtf": 0.4404992740097318,
+        "onset": {
+          "precision": 0.9748085106382979,
+          "recall": 0.9345626631853786,
+          "f1": 0.9542614346413397
+        },
+        "onset_offset": {
+          "precision": 0.454468085106383,
+          "recall": 0.43570496083550914,
+          "f1": 0.4448887778055486
+        },
+        "n_ref_notes": 6128,
+        "n_est_notes": 5875,
+        "error": null
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_duration_s": 405.36632653061224,
+        "latency_s": 177.82292320800116,
+        "rtf": 0.43867216285557065,
+        "onset": {
+          "precision": 0.9589179623309316,
+          "recall": 0.9177353012339705,
+          "f1": 0.9378747604623849
+        },
+        "onset_offset": {
+          "precision": 0.23423081784856528,
+          "recall": 0.22417130413743044,
+          "f1": 0.2290906843048773
+        },
+        "n_ref_notes": 8266,
+        "n_est_notes": 7911,
+        "error": null
+      }
+    ],
+    "onsets_frames": [
+      {
+        "audio_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.wav",
+        "midi_filename": "2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_04_WAV.midi",
+        "audio_duration_s": 271.7032426303855,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.wav",
+        "midi_filename": "2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_05_Track05_wav.midi",
+        "audio_duration_s": 209.75752834467121,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_05_R1_2008_01-04_ORIG_MID--AUDIO_05_R1_2008_wav--3.midi",
+        "audio_duration_s": 352.3161678004535,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--6.midi",
+        "audio_duration_s": 978.2060317460317,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.wav",
+        "midi_filename": "2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_03_Track03_wav.midi",
+        "audio_duration_s": 189.9214739229025,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--4.midi",
+        "audio_duration_s": 672.8139682539683,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.wav",
+        "midi_filename": "2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--4.midi",
+        "audio_duration_s": 305.922925170068,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.wav",
+        "midi_filename": "2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--2.midi",
+        "audio_duration_s": 278.578253968254,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
+        "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
+        "audio_duration_s": 312.7502267573696,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      },
+      {
+        "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
+        "midi_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.midi",
+        "audio_duration_s": 405.36632653061224,
+        "latency_s": null,
+        "rtf": null,
+        "onset": null,
+        "onset_offset": null,
+        "n_ref_notes": null,
+        "n_est_notes": null,
+        "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+      }
+    ]
+  },
+  "models": {
+    "hft_transformer": {
+      "model_id": "hft_transformer",
+      "name": "hFT-Transformer",
+      "status": "complete",
+      "n_success": 10,
+      "n_expected": 10,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 5516574,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9941717657237922,
+        "recall": 0.92682226291034,
+        "f1": 0.9589511859828145
+      },
+      "macro_onset_offset": {
+        "precision": 0.29135496068118855,
+        "recall": 0.2731237248535279,
+        "f1": 0.28186287258766196
+      },
+      "macro_over_n": 10,
+      "median_latency_s": 39.844171583500156,
+      "overall_rtf": 0.13096459939788863,
+      "latency_sum_s": 520.8902349170012,
+      "audio_duration_sum_s": 3977.336145124717,
+      "peak_ram_bytes": 3578642432,
+      "peak_ram_source": "max of psutil.Process.memory_info().rss sampled every 100 ms by the parent and resource.getrusage(RUSAGE_SELF).ru_maxrss of the worker (bytes on macOS)",
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 624683264,
+      "peak_vram_source": "peak of torch.mps.current_allocated_memory, sampled every 50 ms",
+      "peak_vram_reason": null,
+      "weight_bytes": 22136000,
+      "weight_sha256": "f3a90cf0b82895f9923f3e766bff7e0a4759bc477370f015496ded2ad63e127f",
+      "weight_filename": "model_016_003.pkl"
+    },
+    "transkun_v2": {
+      "model_id": "transkun_v2",
+      "name": "Transkun V2",
+      "status": "complete",
+      "n_success": 10,
+      "n_expected": 10,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 12859535,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9942448941215629,
+        "recall": 0.9530364354221799,
+        "f1": 0.973099716575412
+      },
+      "macro_onset_offset": {
+        "precision": 0.29758519006954837,
+        "recall": 0.28570613293571984,
+        "f1": 0.2915000287408863
+      },
+      "macro_over_n": 10,
+      "median_latency_s": 30.12611695849955,
+      "overall_rtf": 0.09764250132844175,
+      "latency_sum_s": 388.35704983399955,
+      "audio_duration_sum_s": 3977.336145124717,
+      "peak_ram_bytes": 1689157632,
+      "peak_ram_source": "max of psutil.Process.memory_info().rss sampled every 100 ms by the parent and resource.getrusage(RUSAGE_SELF).ru_maxrss of the worker (bytes on macOS)",
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 1141573376,
+      "peak_vram_source": "peak of torch.mps.current_allocated_memory, sampled every 50 ms",
+      "peak_vram_reason": null,
+      "weight_bytes": 47830063,
+      "weight_sha256": "a7341e89ca3ceafce39c15ae1c4ea520b9d6d78498736d8d6b0602433ddfa941",
+      "weight_filename": "transkun_v2.pt"
+    },
+    "sft_crnn": {
+      "model_id": "sft_crnn",
+      "name": "SFT-CRNN",
+      "status": "partial",
+      "n_success": 3,
+      "n_expected": 10,
+      "partial": true,
+      "device": "mps",
+      "device_fallback": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 3 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error.",
+      "dtype": "torch.float32",
+      "n_parameters": 13771106,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9906133541268138,
+        "recall": 0.9639446891592452,
+        "f1": 0.977046063199232
+      },
+      "macro_onset_offset": {
+        "precision": 0.40474975242156025,
+        "recall": 0.3962387435917843,
+        "f1": 0.4004353081420465
+      },
+      "macro_over_n": 3,
+      "median_latency_s": 134.9729582079999,
+      "overall_rtf": 0.6853581677795886,
+      "latency_sum_s": 464.8491504169979,
+      "audio_duration_sum_s": 678.2572562358278,
+      "peak_ram_bytes": 1891860480,
+      "peak_ram_source": "max RSS across the per-recording SFT-CRNN processes",
+      "peak_ram_reason": null,
+      "peak_vram_bytes": null,
+      "peak_vram_source": null,
+      "peak_vram_reason": "Sampling torch.mps.current_allocated_memory from a side thread stalls this model. The reading on the inference thread after a successful recording was 426314240 bytes of retained memory, not the peak. A failed recording reported MPS allocated 8.94 GiB.",
+      "weight_bytes": 61983435,
+      "weight_sha256": "0c065bc952591cda09197a2b811e0c117669ddba73982aeeed0c531586a755dd",
+      "weight_filename": "SFT-CRNN_Piano-MAESTRO_OTLoss_steps.340609.ckpt"
+    },
+    "hrt": {
+      "model_id": "hrt",
+      "name": "HRT",
+      "status": "complete",
+      "n_success": 10,
+      "n_expected": 10,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 42946305,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9701130661750786,
+        "recall": 0.9302963362970365,
+        "f1": 0.9496071917480189
+      },
+      "macro_onset_offset": {
+        "precision": 0.24512100796270403,
+        "recall": 0.23612697486359452,
+        "f1": 0.24050058108262395
+      },
+      "macro_over_n": 10,
+      "median_latency_s": 135.988824604,
+      "overall_rtf": 0.4363868389131535,
+      "latency_sum_s": 1735.6571476660029,
+      "audio_duration_sum_s": 3977.336145124717,
+      "peak_ram_bytes": 2863104000,
+      "peak_ram_source": "max of psutil.Process.memory_info().rss sampled every 100 ms by the parent and resource.getrusage(RUSAGE_SELF).ru_maxrss of the worker (bytes on macOS)",
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 310479104,
+      "peak_vram_source": "peak of torch.mps.current_allocated_memory, sampled every 50 ms",
+      "peak_vram_reason": null,
+      "weight_bytes": 171966578,
+      "weight_sha256": "c3fa9730725bf4a762f1c14bc80cd5986eacda01b026f5a4a2525cd607876141",
+      "weight_filename": "CRNN_note_F1=0.9677_pedal_F1=0.9186.pth"
+    },
+    "onsets_frames": {
+      "model_id": "onsets_frames",
+      "name": "OnF",
+      "status": "failed",
+      "n_success": 0,
+      "n_expected": 10,
+      "partial": false,
+      "device": null,
+      "device_fallback": null,
+      "dtype": null,
+      "n_parameters": null,
+      "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started.",
+      "macro_onset": null,
+      "macro_onset_offset": null,
+      "macro_over_n": 0,
+      "median_latency_s": null,
+      "overall_rtf": null,
+      "latency_sum_s": null,
+      "audio_duration_sum_s": null,
+      "peak_ram_bytes": 212140032,
+      "peak_ram_source": "max of psutil.Process.memory_info().rss sampled every 100 ms by the parent and resource.getrusage(RUSAGE_SELF).ru_maxrss of the worker (bytes on macOS)",
+      "peak_ram_reason": null,
+      "peak_vram_bytes": null,
+      "peak_vram_source": null,
+      "peak_vram_reason": null,
+      "weight_bytes": null,
+      "weight_sha256": null,
+      "weight_filename": null
+    }
+  },
+  "speed_results_by_device": {
+    "mps": [
+      "hft_transformer",
+      "transkun_v2",
+      "sft_crnn",
+      "hrt"
+    ],
+    "not_run": [
+      "onsets_frames"
+    ]
+  },
+  "errors": [
+    {
+      "model_id": "onsets_frames",
+      "error": "RuntimeError: Magenta Onsets and Frames publishes maestro_checkpoint.zip for TensorFlow. magenta 2.1.4 does not install on Python 3.12: it requires Python <3.9 and TensorFlow 2.3, and this host has no CUDA. The official transcribe entry point was not started."
+    }
+  ]
+}
