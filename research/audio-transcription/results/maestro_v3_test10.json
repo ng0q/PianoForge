@@ -393,7 +393,7 @@
     },
     "recording_limit": null,
     "device_request": "auto",
-    "sft_crnn_process_note": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 3 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error."
+    "sft_crnn_process_note": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 4 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error."
   },
   "environment": {
     "python": "3.12.14",
@@ -1085,13 +1085,21 @@
         "audio_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.wav",
         "midi_filename": "2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_02_Track02_wav.midi",
         "audio_duration_s": 312.7502267573696,
-        "latency_s": null,
-        "rtf": null,
-        "onset": null,
-        "onset_offset": null,
-        "n_ref_notes": null,
-        "n_est_notes": null,
-        "error": "RuntimeError: MPS backend out of memory (MPS allocated: 8.94 GiB, other allocations: 9.24 GiB, max allowed: 20.13 GiB). Tried to allocate 2.25 GiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure)."
+        "latency_s": 327.6997626250013,
+        "rtf": 1.0478002398995205,
+        "onset": {
+          "precision": 0.9918297872340426,
+          "recall": 0.9508812010443864,
+          "f1": 0.970923935682746
+        },
+        "onset_offset": {
+          "precision": 0.5725957446808511,
+          "recall": 0.5489556135770235,
+          "f1": 0.5605265350329084
+        },
+        "n_ref_notes": 6128,
+        "n_est_notes": 5875,
+        "error": null
       },
       {
         "audio_filename": "2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--4.wav",
@@ -1510,29 +1518,29 @@
       "model_id": "sft_crnn",
       "name": "SFT-CRNN",
       "status": "partial",
-      "n_success": 3,
+      "n_success": 4,
       "n_expected": 10,
       "partial": true,
       "device": "mps",
-      "device_fallback": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 3 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error.",
+      "device_fallback": "One process stalled in the MPS allocator on the first recording, so each recording ran in a fresh process after warming up on that same file. 4 of 10 processes produced notes. The others stalled or hit an MPS out-of-memory error.",
       "dtype": "torch.float32",
       "n_parameters": 13771106,
       "error": null,
       "macro_onset": {
-        "precision": 0.9906133541268138,
-        "recall": 0.9639446891592452,
-        "f1": 0.977046063199232
+        "precision": 0.990917462403621,
+        "recall": 0.9606788171305305,
+        "f1": 0.9755155313201105
       },
       "macro_onset_offset": {
-        "precision": 0.40474975242156025,
-        "recall": 0.3962387435917843,
-        "f1": 0.4004353081420465
+        "precision": 0.446711250486383,
+        "recall": 0.4344179610880941,
+        "f1": 0.440458114864762
       },
-      "macro_over_n": 3,
-      "median_latency_s": 134.9729582079999,
-      "overall_rtf": 0.6853581677795886,
-      "latency_sum_s": 464.8491504169979,
-      "audio_duration_sum_s": 678.2572562358278,
+      "macro_over_n": 4,
+      "median_latency_s": 169.7741335414994,
+      "overall_rtf": 0.799740593933981,
+      "latency_sum_s": 792.5489130419992,
+      "audio_duration_sum_s": 991.0074829931973,
       "peak_ram_bytes": 1891860480,
       "peak_ram_source": "max RSS across the per-recording SFT-CRNN processes",
       "peak_ram_reason": null,
