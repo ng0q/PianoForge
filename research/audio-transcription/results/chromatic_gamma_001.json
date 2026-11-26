@@ -1,0 +1,499 @@
+{
+  "benchmark": "chromatic_gamma",
+  "manifest": {
+    "dataset": "chromatic gamma",
+    "recorded": "2026-11-25",
+    "reference": "One MIDI file recorded from the instrument and aligned to both audio files. Note offsets are key-release times; sustain pedal is not applied.",
+    "midi": {
+      "filename": "take-20261125-181306.mid",
+      "path": "/Users/ilya/Documents/Samsung_project/data/dataset/Tests/chromatic-gamma/take-20261125-181306.mid",
+      "bytes": 787,
+      "sha256": "e85d876a38918228341fbd90103cc317a78b9b51bfcb8b0fc73e710bf1b470ee"
+    },
+    "n_ref_notes": 88,
+    "recordings": [
+      {
+        "order": 0,
+        "label": "iPhone",
+        "capture": "stereo, several meters from the instrument",
+        "audio_filename": "01-iPhone_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/dataset/Tests/chromatic-gamma/01-iPhone_chromatic_gamma.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/dataset/Tests/chromatic-gamma/take-20261125-181306.mid",
+        "sample_rate": 48000,
+        "channels": 2,
+        "audio_duration_s": 18.044,
+        "audio_duration_source": "soundfile.info",
+        "audio_bytes": 3464492,
+        "audio_sha256": "d6ea97ccc825741ede816ca1044e5338d0ef975c8e9f4e1fa27b4ed3c2532b52",
+        "midi_bytes": 787,
+        "midi_sha256": "e85d876a38918228341fbd90103cc317a78b9b51bfcb8b0fc73e710bf1b470ee",
+        "shared_reference_midi": true
+      },
+      {
+        "order": 1,
+        "label": "iPad",
+        "capture": "mono, microphone on the music stand",
+        "audio_filename": "02-iPad_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_path": "/Users/ilya/Documents/Samsung_project/data/dataset/Tests/chromatic-gamma/02-iPad_chromatic_gamma.wav",
+        "midi_path": "/Users/ilya/Documents/Samsung_project/data/dataset/Tests/chromatic-gamma/take-20261125-181306.mid",
+        "sample_rate": 48000,
+        "channels": 1,
+        "audio_duration_s": 18.044,
+        "audio_duration_source": "soundfile.info",
+        "audio_bytes": 1732268,
+        "audio_sha256": "b376fd6954aaa223da240cb844f3df7a4be3c8bb428967a0be75a2879db5c3a3",
+        "midi_bytes": 787,
+        "midi_sha256": "e85d876a38918228341fbd90103cc317a78b9b51bfcb8b0fc73e710bf1b470ee",
+        "shared_reference_midi": true
+      }
+    ]
+  },
+  "configuration": {
+    "evaluation": {
+      "event": "(midi_pitch, onset_s, offset_s)",
+      "reference": "pretty_midi note-on/note-off; CC64 sustain is not applied",
+      "pedal_extension": false,
+      "pitch_hz": "440 * 2 ** ((midi_pitch - 69) / 12)",
+      "function": "mir_eval.transcription.precision_recall_f1_overlap",
+      "pitch_tolerance_cents": 50.0,
+      "onset": {
+        "onset_tolerance_s": 0.05,
+        "offset_ratio": null,
+        "pitch_tolerance_cents": 50.0
+      },
+      "onset_offset": {
+        "onset_tolerance_s": 0.05,
+        "offset_ratio": 0.2,
+        "offset_min_tolerance_s": 0.05,
+        "offset_tolerance": "max(50 ms, 20% of the reference note duration)",
+        "pitch_tolerance_cents": 50.0
+      },
+      "drop_nonpositive_duration": true
+    },
+    "timing": {
+      "warmup": "one untimed full transcription of the first recording, 01-iPhone_chromatic_gamma.wav",
+      "latency": "perf_counter from the model's audio read through the note list",
+      "includes": [
+        "preprocessing",
+        "inference",
+        "decoding"
+      ],
+      "excludes": [
+        "model load",
+        "metric computation"
+      ],
+      "accelerator_sync": "before the timer starts and before it stops",
+      "rtf": "latency_s / audio_duration_s",
+      "overall_rtf": "sum(latency_s) / sum(audio_duration_s) over successful recordings",
+      "median_latency": "median of per-recording latency_s",
+      "vram_poll": "AMT_VRAM_POLL=0, so the MPS figure is the allocated memory read on the inference thread after each recording, not a sampled peak"
+    },
+    "inference": {
+      "hft_transformer": {
+        "mode": "combination",
+        "scored_output": "2nd",
+        "n_stride": 0,
+        "ablation": false,
+        "thred_onset": 0.5,
+        "thred_offset": 0.5,
+        "thred_mpe": 0.5,
+        "mode_velocity": "ignore_zero",
+        "mode_offset": "shorter",
+        "config": "corpus/config.json plus min_value=log(log_offset) and max_value=0 from corpus/make_dataset.py",
+        "preprocessing": "AMT.wav2feature",
+        "decoding": "AMT.transcript + AMT.mpe2note"
+      },
+      "transkun_v2": {
+        "segmentHopSizeInSecond": 8,
+        "segmentSizeInSecond": 16,
+        "discardSecondHalf": false,
+        "mergeIncompleteEvent": true,
+        "fs": 44100,
+        "audio_normalization": "int16 / 2**15",
+        "resample": "soxr to model.fs when the file rate differs",
+        "wav_reader": "pydub.AudioSegment.from_file; upstream readAudio calls from_mp3",
+        "note_filter": "pitch > 0, matching Data.writeMidi",
+        "decoding": "ModelTransformer.transcribe",
+        "config": "model.conf inside the Google Drive archive. scoringExpansionFactor=2 and contextDropoutProb=0.1. The repository file pretrained/2.0.conf belongs to Transkun V2 No Pedal Ext and is not used."
+      },
+      "hrt": {
+        "model_type": "Note_pedal",
+        "segment_samples": 160000,
+        "forward_batch_size": 1,
+        "onset_threshold": 0.3,
+        "offset_threshold": 0.3,
+        "frame_threshold": 0.1,
+        "pedal_offset_threshold": 0.2,
+        "sample_rate": 16000,
+        "preprocessing": "piano_transcription_inference.utilities.load_audio",
+        "decoding": "RegressionPostProcessor.output_dict_to_midi_events"
+      },
+      "sft_crnn": {
+        "config": "config/main_config.yaml via hydra, experiment_optTransportLoss",
+        "n_frames": 1200,
+        "dropout_rate": 0.0,
+        "training_mode": "test",
+        "batch_inference": 64,
+        "onset_offset_threshold": 0.5,
+        "sample_rate": 48000,
+        "hop_length": 1200,
+        "features": "cqt",
+        "amplitude_to_db": true,
+        "duration_clip_s": [
+          0.05,
+          10.0
+        ],
+        "precision": "float32; upstream inference.py autocasts float16 on CUDA only",
+        "preprocessing": "librosa.load + nnAudio CQT + AmplitudeToDB, as inference.py",
+        "decoding": "data.notes_parser.pianoroll_to_notes_list"
+      }
+    },
+    "device_request": "mps",
+    "models_not_run": [
+      "onsets_frames"
+    ]
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-27.2.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "numpy": "2.5.5",
+    "mir_eval": "0.8.2",
+    "pretty_midi": "0.2.11.post0",
+    "torch": "2.15.0",
+    "torchaudio": "2.11.1",
+    "librosa": "1.0.1",
+    "soundfile": "0.14.0"
+  },
+  "recordings": {
+    "hft_transformer": [
+      {
+        "audio_filename": "01-iPhone_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 1.9883597910229582,
+        "rtf": 0.11019506711499436,
+        "onset": {
+          "precision": 0.9069767441860465,
+          "recall": 0.8863636363636364,
+          "f1": 0.896551724137931
+        },
+        "onset_offset": {
+          "precision": 0.6511627906976745,
+          "recall": 0.6363636363636364,
+          "f1": 0.6436781609195402
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 86,
+        "error": null
+      },
+      {
+        "audio_filename": "02-iPad_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 1.9617211669974495,
+        "rtf": 0.10871875232750218,
+        "onset": {
+          "precision": 0.9761904761904762,
+          "recall": 0.9318181818181818,
+          "f1": 0.9534883720930233
+        },
+        "onset_offset": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6363636363636364,
+          "f1": 0.6511627906976744
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 84,
+        "error": null
+      }
+    ],
+    "transkun_v2": [
+      {
+        "audio_filename": "01-iPhone_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 2.904565500008175,
+        "rtf": 0.1609712646867754,
+        "onset": {
+          "precision": 0.845360824742268,
+          "recall": 0.9318181818181818,
+          "f1": 0.8864864864864865
+        },
+        "onset_offset": {
+          "precision": 0.5567010309278351,
+          "recall": 0.6136363636363636,
+          "f1": 0.5837837837837838
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 97,
+        "error": null
+      },
+      {
+        "audio_filename": "02-iPad_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 2.89625600000727,
+        "rtf": 0.16051075149674518,
+        "onset": {
+          "precision": 0.845360824742268,
+          "recall": 0.9318181818181818,
+          "f1": 0.8864864864864865
+        },
+        "onset_offset": {
+          "precision": 0.5773195876288659,
+          "recall": 0.6363636363636364,
+          "f1": 0.6054054054054053
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 97,
+        "error": null
+      }
+    ],
+    "hrt": [
+      {
+        "audio_filename": "01-iPhone_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 6.76522370899329,
+        "rtf": 0.3749292678448952,
+        "onset": {
+          "precision": 0.961038961038961,
+          "recall": 0.8409090909090909,
+          "f1": 0.896969696969697
+        },
+        "onset_offset": {
+          "precision": 0.6103896103896104,
+          "recall": 0.5340909090909091,
+          "f1": 0.5696969696969697
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 77,
+        "error": null
+      },
+      {
+        "audio_filename": "02-iPad_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 6.698632999992697,
+        "rtf": 0.37123880514257906,
+        "onset": {
+          "precision": 0.8023255813953488,
+          "recall": 0.7840909090909091,
+          "f1": 0.7931034482758621
+        },
+        "onset_offset": {
+          "precision": 0.627906976744186,
+          "recall": 0.6136363636363636,
+          "f1": 0.6206896551724139
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 86,
+        "error": null
+      }
+    ],
+    "sft_crnn": [
+      {
+        "audio_filename": "01-iPhone_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 5.410275332978927,
+        "rtf": 0.29983791470732246,
+        "onset": {
+          "precision": 1.0,
+          "recall": 0.8977272727272727,
+          "f1": 0.9461077844311377
+        },
+        "onset_offset": {
+          "precision": 0.6835443037974683,
+          "recall": 0.6136363636363636,
+          "f1": 0.6467065868263473
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 79,
+        "error": null
+      },
+      {
+        "audio_filename": "02-iPad_chromatic_gamma.wav",
+        "midi_filename": "take-20261125-181306.mid",
+        "audio_duration_s": 18.044,
+        "latency_s": 5.660674749989994,
+        "rtf": 0.31371507149135414,
+        "onset": {
+          "precision": 0.9540229885057471,
+          "recall": 0.9431818181818182,
+          "f1": 0.9485714285714286
+        },
+        "onset_offset": {
+          "precision": 0.6436781609195402,
+          "recall": 0.6363636363636364,
+          "f1": 0.64
+        },
+        "n_ref_notes": 88,
+        "n_est_notes": 87,
+        "error": null
+      }
+    ]
+  },
+  "models": {
+    "hft_transformer": {
+      "model_id": "hft_transformer",
+      "name": "hFT-Transformer",
+      "status": "complete",
+      "n_success": 2,
+      "n_expected": 2,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 5516574,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9415836101882613,
+        "recall": 0.9090909090909091,
+        "f1": 0.9250200481154771
+      },
+      "macro_onset_offset": {
+        "precision": 0.6589147286821706,
+        "recall": 0.6363636363636364,
+        "f1": 0.6474204758086073
+      },
+      "macro_over_n": 2,
+      "median_latency_s": 1.9750404790102039,
+      "overall_rtf": 0.10945690972124827,
+      "latency_sum_s": 3.9500809580204077,
+      "audio_duration_sum_s": 36.088,
+      "peak_ram_bytes": null,
+      "peak_ram_source": null,
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 22071552,
+      "peak_vram_source": "torch.mps.current_allocated_memory read on the inference thread after each recording. A side thread was not used because sampling from one stalls this model in the Metal allocator.",
+      "peak_vram_reason": null,
+      "weight_bytes": 22136000,
+      "weight_sha256": "f3a90cf0b82895f9923f3e766bff7e0a4759bc477370f015496ded2ad63e127f",
+      "weight_filename": "model_016_003.pkl",
+      "ru_maxrss_bytes": 588464128,
+      "torch": "2.15.0"
+    },
+    "transkun_v2": {
+      "model_id": "transkun_v2",
+      "name": "Transkun V2",
+      "status": "complete",
+      "n_success": 2,
+      "n_expected": 2,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 12859535,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.845360824742268,
+        "recall": 0.9318181818181818,
+        "f1": 0.8864864864864865
+      },
+      "macro_onset_offset": {
+        "precision": 0.5670103092783505,
+        "recall": 0.625,
+        "f1": 0.5945945945945945
+      },
+      "macro_over_n": 2,
+      "median_latency_s": 2.9004107500077225,
+      "overall_rtf": 0.16074100809176028,
+      "latency_sum_s": 5.800821500015445,
+      "audio_duration_sum_s": 36.088,
+      "peak_ram_bytes": null,
+      "peak_ram_source": null,
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 53356032,
+      "peak_vram_source": "torch.mps.current_allocated_memory read on the inference thread after each recording. A side thread was not used because sampling from one stalls this model in the Metal allocator.",
+      "peak_vram_reason": null,
+      "weight_bytes": 47830063,
+      "weight_sha256": "a7341e89ca3ceafce39c15ae1c4ea520b9d6d78498736d8d6b0602433ddfa941",
+      "weight_filename": "transkun_v2.pt",
+      "ru_maxrss_bytes": 710115328,
+      "torch": "2.15.0"
+    },
+    "hrt": {
+      "model_id": "hrt",
+      "name": "HRT",
+      "status": "complete",
+      "n_success": 2,
+      "n_expected": 2,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 42946305,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.8816822712171549,
+        "recall": 0.8125,
+        "f1": 0.8450365726227795
+      },
+      "macro_onset_offset": {
+        "precision": 0.6191482935668982,
+        "recall": 0.5738636363636364,
+        "f1": 0.5951933124346918
+      },
+      "macro_over_n": 2,
+      "median_latency_s": 6.731928354492993,
+      "overall_rtf": 0.3730840364937371,
+      "latency_sum_s": 13.463856708985986,
+      "audio_duration_sum_s": 36.088,
+      "peak_ram_bytes": null,
+      "peak_ram_source": null,
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 173964544,
+      "peak_vram_source": "torch.mps.current_allocated_memory read on the inference thread after each recording. A side thread was not used because sampling from one stalls this model in the Metal allocator.",
+      "peak_vram_reason": null,
+      "weight_bytes": 171966578,
+      "weight_sha256": "c3fa9730725bf4a762f1c14bc80cd5986eacda01b026f5a4a2525cd607876141",
+      "weight_filename": "CRNN_note_F1=0.9677_pedal_F1=0.9186.pth",
+      "ru_maxrss_bytes": 1392508928,
+      "torch": "2.15.0"
+    },
+    "sft_crnn": {
+      "model_id": "sft_crnn",
+      "name": "SFT-CRNN",
+      "status": "complete",
+      "n_success": 2,
+      "n_expected": 2,
+      "partial": false,
+      "device": "mps",
+      "device_fallback": null,
+      "dtype": "torch.float32",
+      "n_parameters": 13771106,
+      "error": null,
+      "macro_onset": {
+        "precision": 0.9770114942528736,
+        "recall": 0.9204545454545454,
+        "f1": 0.9473396065012831
+      },
+      "macro_onset_offset": {
+        "precision": 0.6636112323585043,
+        "recall": 0.625,
+        "f1": 0.6433532934131736
+      },
+      "macro_over_n": 2,
+      "median_latency_s": 5.53547504148446,
+      "overall_rtf": 0.3067764930993383,
+      "latency_sum_s": 11.07095008296892,
+      "audio_duration_sum_s": 36.088,
+      "peak_ram_bytes": null,
+      "peak_ram_source": null,
+      "peak_ram_reason": null,
+      "peak_vram_bytes": 426314240,
+      "peak_vram_source": "torch.mps.current_allocated_memory read on the inference thread after each recording. A side thread was not used because sampling from one stalls this model in the Metal allocator.",
+      "peak_vram_reason": null,
+      "weight_bytes": 61983435,
+      "weight_sha256": "0c065bc952591cda09197a2b811e0c117669ddba73982aeeed0c531586a755dd",
+      "weight_filename": "SFT-CRNN_Piano-MAESTRO_OTLoss_steps.340609.ckpt",
+      "ru_maxrss_bytes": 1614184448,
+      "torch": "2.15.0"
+    }
+  }
+}

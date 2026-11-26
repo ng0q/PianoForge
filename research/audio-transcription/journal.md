@@ -7,7 +7,7 @@ Identify, evaluate, and prepare a suitable Automatic Music Transcription (AMT) m
 ## Links
 
 - Parent issue: https://github.com/ng0q/PianoForge/issues/12
-- First notebook: [notebooks/01_exploration.ipynb](notebooks/01_exploration.ipynb)
+- Benchmark notebook: [notebooks/01_amt_benchmark.ipynb](notebooks/01_amt_benchmark.ipynb)
 
 ## Entry template
 

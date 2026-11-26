@@ -1,4 +1,4 @@
-# Python 3.12 environment for notebooks/02_amt_benchmark.ipynb.
+# Python 3.12 environment for notebooks/01_amt_benchmark.ipynb.
 # ffmpeg is also required by the HRT audio loader.
 numpy==2.5.5
 mir_eval==0.8.2
